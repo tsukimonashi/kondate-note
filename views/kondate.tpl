@@ -10,7 +10,7 @@
     <h1>献立の一覧</h1>
     <ul>
     % for menu in menus:
-        <li>{{menu}}</li>
+        <li>{{menu['name']}} {{menu['kcal']}}</li>
     % end
     </ul>
 </div>
