@@ -27,7 +27,7 @@ def create_delete(id):
 
 
 def create_fetchall():
-    menus.select().execute().fetchall()
+    return menus.select().execute().fetchall()
 
 
 def cleate_fetch(id):

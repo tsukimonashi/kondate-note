@@ -7,7 +7,12 @@
 </head>
 <body>
 <div class="container">
-    <h1>Hello</h1>
+    <h1>献立の一覧</h1>
+    <ul>
+    % for menu in menus:
+        <li>{{menu}}</li>
+    % end
+    </ul>
 </div>
 </body>
 </html>

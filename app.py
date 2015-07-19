@@ -10,7 +10,7 @@ def menu_params():
 
 @route('/')
 def index():
-    return template('kondate')
+    return template('kondate',menus=db.create_fetchall())
 
 @get('/new')
 def new():
