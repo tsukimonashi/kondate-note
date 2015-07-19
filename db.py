@@ -15,12 +15,14 @@ menus = Table(
 def create():
     metadata.create_all()
 
-def create_menu(name, kcal):
-    menus.insert().execute(name=name, kcal=kcal)
+def create_menu(name, kcal, image):
+    return menus.insert().execute(name=name, kcal=kcal, image=image)
 
 
-def create_update(id, name, kcal):
-    menus.update().where(menus.c.id == id).execute(name=name, kcal=kcal)
+def create_update(id, name, kcal, image):
+    menus.update().where(menus.c.id == id).execute(
+        name=name, kcal=kcal, image=image
+    )
 
 def create_delete(id):
     menus.delete().where(menus.c.id == id).execute()

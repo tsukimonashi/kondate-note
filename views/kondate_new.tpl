@@ -1,18 +1,17 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <title>献立</title>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body>
-<div class="container">
-    <h1>献立</h1>
-    <form action="/new" method="GET">
-            名前:<input type="text" name="name">
-            kcal:<input type="text" kcal="kcal">
-            <input type="submit" value="新規作成">
-    </form>
-</div>
-</body>
-</html>
+% rebase('base.tpl')
+<h4>献立の新規登録</h4>
+<form action="/menus/new" method="POST">
+    <div class="form-group">
+        <label>名前</label>
+        <input class="form-control" type="text" name="name">
+    </div>
+    <div class="form-group">
+        <label>カロリー</label>
+        <input class="form-control" type="number" name="kcal">
+    </div>
+    <div class="form-group">
+        <label>画像URL</label>
+        <input class="form-control" type="text" name="image">
+    </div>
+    <button class="btn btn-primary" type="submit">送信</button>
+</form>
