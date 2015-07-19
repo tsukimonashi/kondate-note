@@ -7,7 +7,12 @@
 </head>
 <body>
 <div class="container">
-    <h1>Hello</h1>
+    <h1>献立</h1>
+    <form action="/new" method="GET">
+            名前:<input type="text" name="name">
+            kcal:<input type="text" kcal="kcal">
+            <input type="submit" value="新規作成">
+    </form>
 </div>
 </body>
 </html>

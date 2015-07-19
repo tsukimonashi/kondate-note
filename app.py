@@ -9,12 +9,12 @@ def menu_params():
     }
 
 @route('/')
-def new():
-    return 'a'
-
-@get('/new')
 def index():
     return template('kondate')
+
+@get('/new')
+def new():
+    return template('kondate_new')
 
 @post('/new')
 def newdata():

@@ -9,6 +9,7 @@ menus = Table(
     Column('id',Integer, primary_key=True),
     Column('name', String, unique=True),
     Column('kcal', Integer),
+    Column('image', String),
 )
 
 def create():
